@@ -1,0 +1,37 @@
+.header__nav {
+    display:flex;
+    overflow: hidden;
+    border: 1px solid black;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #0A4FBF;
+    color: #fff;
+    padding: 4px 6px;
+}
+
+a {
+    color: initial;
+}
+.header__logo a {
+    font-weight: 700;
+    font-size: 23px;
+    position: relative;
+    left: 80px;
+    color: #fff;
+}
+
+.header__menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 23px;
+}
+
+.header__menu li a {
+    font-size: 17px;
+    font-weight: 700px;
+    color: #fff;
+}

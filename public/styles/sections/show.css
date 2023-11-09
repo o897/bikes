@@ -1,0 +1,38 @@
+.show {
+    display: flex;
+    margin: auto;
+}
+
+.bike__image-show img {
+    height : 502px;
+    width: 670px;
+}
+
+.bike__contact-owner {
+    display: grid;
+    margin-left: 20px;
+}
+
+.bike__contact {
+    border: 1px solid orange;
+}
+
+.bike__contact-form form {
+    display: grid;
+}
+
+
+.bike__contact-input {
+    display: grid;
+    margin-bottom: 4px;
+    height: 36px;
+    width: 230px;
+    padding: 10px;
+    border-radius: 3px;
+    
+}
+
+
+
+
+

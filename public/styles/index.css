@@ -1,0 +1,94 @@
+html {
+
+    font-size: 62.5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(91, 112, 131, 0.4);
+
+}
+
+.formfield {
+    display: flex;
+   
+}
+
+i.formfield {
+    padding: 2 0;
+}
+
+.wrapper {   
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    margin: 4em;
+}
+
+nav ul {
+   font-size: 2.3rem; 
+   list-style-type: none;
+   display: flex;
+   gap: 4.1rem;
+   margin: 0; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+ .forms {
+    display: flex;
+    gap: 14em;
+    margin: 23em;
+    justify-content: center;
+} 
+
+/* .form {
+    
+    border: 1px solid black;
+    padding: 1em;
+} */
+
+.signup {
+    padding: 4px 15px;
+    font-size: 17px;
+    /* border-radius: .8em; */
+    border: 1px solid black;
+    display: grid;
+    gap: 10px;
+    
+    
+}
+
+.login {
+    padding: 15px 15px;
+    font-size: 17px;
+    margin: 4em 4em;
+    border: 1px solid black;
+}
+
+
+input {
+    padding: 3px 8px 2px;
+    display: grid;
+    margin: .5em;
+    height: 23px;
+    border: 2px solid black;
+}
+
+button {
+    background-color: #d44179;
+    height: 27px;
+    width: 84px;
+    margin: 0.5em;
+}
