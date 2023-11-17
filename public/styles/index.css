@@ -2,17 +2,18 @@ html {
 
     font-size: 62.5%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: rgba(91, 112, 131, 0.4);
+    background-color: #dedee2 !important;
 
 }
+
 
 .formfield {
     display: flex;
    
 }
 
-i.formfield {
-    padding: 2 0;
+.i formfield {
+    padding: 2px 0;
 }
 
 .wrapper {   
@@ -30,21 +31,6 @@ nav {
     margin: 4em;
 }
 
-nav ul {
-   font-size: 2.3rem; 
-   list-style-type: none;
-   display: flex;
-   gap: 4.1rem;
-   margin: 0; 
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    position: relative;
-}
 
  .forms {
     display: flex;

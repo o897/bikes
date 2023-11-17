@@ -9,7 +9,7 @@ if(isset($_POST["submit"])) {
 
     include "../Models/dbh.php";
     include "../Models/User.php";
-    include "../Controllers/RegisterController.php";
+    include "./Controllers/RegisterController.php";
 
     $signup = new SignupController($username,$password,$password2,$email,$contact);
 

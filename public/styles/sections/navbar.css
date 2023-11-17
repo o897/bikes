@@ -13,13 +13,18 @@
 
 a {
     color: initial;
+    text-decoration: none;
 }
+
 .header__logo a {
     font-weight: 700;
     font-size: 23px;
     position: relative;
     left: 80px;
     color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+
 }
 
 .header__menu {
@@ -34,4 +39,6 @@ a {
     font-size: 17px;
     font-weight: 700px;
     color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }

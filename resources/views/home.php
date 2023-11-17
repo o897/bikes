@@ -1,13 +1,23 @@
 <?php
 session_start();
-include "Models/dbh.php";
-include "Models/Bike.php";
-include "Controllers/BikesController.php";
+include "../../Models/dbh.php";
+include "../../Models/Bike.php";
+include "../../includes/Controllers/BikesController.php";
 
 $bikes = new BikesController();
 
+$sessionStatus = session_status();
+
+// Check if the session is active
+if ($sessionStatus == PHP_SESSION_ACTIVE) {
+    echo "Session is active!";
+} else {
+    echo "Session has not started or is disabled.";
+}
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,16 +30,16 @@ $bikes = new BikesController();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../public/fontawesome-free-6.4.0-web/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/styles/main.css">
+    <link rel="stylesheet" href="../../public/styles/main.css">
 
 </head>
 
 <body>
 
-    <?php include "header.php";?>
+    <?php include "../components/header.php";?>
     <!-- <li><a href="includes/logout.inc.php">Logout</a></li> -->
 
 

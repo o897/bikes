@@ -24,12 +24,12 @@ class LoginController extends User {
             // The login method executes from within the User model
             $this->login($this->username,$this->password);
             
-            header("location: ../home.php");
+            header("location: .././resources/views/home.php");
 
             exit();
 
         } else {
-            header("location: ../home.php?=emptyinput");
+            header("location: ../index.php?=emptyinput");
             exit();
         }
     }

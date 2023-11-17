@@ -8,9 +8,9 @@ if(isset($_POST["submit"])) {
     include "../Models/dbh.php";
     include "../Models/User.php";
     include "../Models/Bike.php";
-    include "../Controllers/LoginController.php";
+    include "./Controllers/LoginController.php";
 
-    include "../Controllers/BikesController.php";
+    include "./Controllers/BikesController.php";
 
     $login = new LoginController($username,$password);
 

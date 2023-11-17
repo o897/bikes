@@ -1,7 +1,7 @@
 <?php
 
 class UserController extends Bike {
-    private $member; //status
+    private $member; 
 
     public function bikes() {
 

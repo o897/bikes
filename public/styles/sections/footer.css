@@ -1,0 +1,14 @@
+footer {
+    background-color: #fff;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.social__links {
+    display: flex;
+
+}

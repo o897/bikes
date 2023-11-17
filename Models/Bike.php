@@ -33,6 +33,11 @@ class Bike extends Dbh {
             session_start();
             $_SESSION["bikeId"] = $result[0]["bikeId"];
             $_SESSION["bikeName"] = $result[0]["bike_name"];
+            $_SESSION["bikePrice"] = $result[0]["bike_cost"];
+
+            print_r($_SESSION);
+            exit();
+
 
             return $result;
         } catch(\PDOException $e) {

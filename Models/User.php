@@ -52,11 +52,14 @@ class User extends Dbh {
         if($user && password_verify($password, $user['password'])) {
             session_start();
             $_SESSION["username"] =  $user['username'];
-           
+            $_SESSION["email"] = $user['email'];
+            $_SESSION["contact"] = $user['contact'];
+
             $query = null;
 
         } else {
-            header("location: ../index.php?error=queryfail");
+            
+            header("location: ../index.php?error=wrongcredentials");
             exit();
         }
 
