@@ -1,0 +1,265 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.contact {
+    display: flex;
+    width: 1196px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact__us {
+   text-align: center;
+   margin-bottom: 40px;
+   font-family: 'Poppins', sans-serif;
+}
+
+.contact__container {
+    display:flex;
+    justify-content: center;
+}
+
+.contact__information {
+    background-color: #025E73;
+    height: 647px;
+    width: 491px;
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+
+}
+
+.contact__information h2 {
+    font-size: 28px;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact__information-details-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 7px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact__information-details-box-address {
+    /* display:flex;
+    flex-direction: column; */
+    margin-left: 5px;
+
+}
+
+.contact__information-details-box-address p {
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.contact__information-details-box p {
+    font-size: 16px;
+    color: #fff;
+    margin-left: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Contact fields */
+.contact__fields-box {
+    display:flex;
+    gap: 8px;
+    align-items: center;
+}
+.contact__fields {
+    padding: 40px;
+}
+
+.form-label {
+    color: gray;
+    font-size: 12px;
+}
+.contact__fields-input{
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #8D8D8D;
+    outline: none;
+    width: 278px;
+}
+
+/* checkboxes section */
+.contact__fields-box-col-check {
+    display: flex;
+}
+
+/* End Checkbox section */
+
+
+/* End Contact fields */
+
+
+
+.contact__information-details-socials {
+
+    display: flex;
+    gap: 22px;
+    position: relative;
+    top: 235px;
+}
+
+/* Send message button */
+
+.message__btn button {
+    width: 214px;
+    height: 54px;
+    background-color: #022840;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    right: -398px;
+}
+
+
+.contact__fields-box-col input {
+    color: #8D8D8D;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #8D8D8D;
+    outline: none;
+}
+/* End Send message button */
+
+/* Checkbox */
+.contact__fields-box-col {
+    display:flex;
+
+}
+
+.query__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.query__box p {
+    margin: 0 !important;
+    width: 121px;
+}
+
+.query__box__first-row {
+display:flex;
+}
+/* End Checkbox */
+
+.contact__message {
+    width: 595px;
+    border: none;
+    border-bottom: 1px solid #8D8D8D;
+    outline: none;
+    background-color: inherit;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 348px;
+    }
+    .contact__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+    }
+    .contact__information {
+        display: flex;
+        flex-direction: column;
+        width: 336px;
+        justify-content: center;
+    }
+    .contact__us h1 {
+        font-weight: 700;
+        text-align: center;
+        
+    }
+
+    .contact h2 {
+        font-weight: 700;
+        text-align: center;
+        inline-size: 278px;
+    }
+    .contact__information-details-socials {
+        left: 64px;
+        top: 80px;
+        width: fit-content;
+    }
+
+    .contact__information-details-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__fields {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact__fields-box  {
+        display: flex;
+        flex-direction: column;
+        width: 278px;
+    }
+
+    .contact__container {
+        width: 348px;
+    }
+
+    .contact__message {
+        width: 278px;
+    }
+
+    .message__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .message__btn button {
+
+        width: 284px;
+        height: 33px;
+        position: relative;
+        right: 0;
+        margin-bottom: 10px;
+        background-color: #022840;
+        border: none;   
+    }
+
+    .query__box__first-row {
+        display: flex;
+    }
+
+    .contact__fields {
+        width: 348px;
+    }
+
+    .contact__fields-box-col {
+        display: flex;
+        flex-direction:column ;
+    }
+
+    .contact__message {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+    }
+    
+    
+}

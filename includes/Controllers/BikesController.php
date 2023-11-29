@@ -38,44 +38,38 @@ class BikesController extends Bike {
     }
 
 
-    public function storeBike($bike_name,$bike_cost,$bike_description,$bike_image,$bike_pictures) 
+    public function storeBike($bike_name,$bike_cost,$bike_description,$bike_image,$bike_pictures,$bike_year) 
     {
-        
-        // $bike_names = var_dump($this->bike_name);
-        // if insert is ok, store the images in the assets folder
-        // $bike_image = image name + date;
-        // now save the file in the assets folder
-        $target_dir = "../public/";
-        $target_file_bike_image = $target_dir . basename($_FILES['bike_image']['name']);
-       
+      $all_bikes_pictures_names = array(); 
+    
 
-        $target_file_bike_pictures = $target_dir . basename($_FILES['bike_image']['name']);
-        
-        // var_dump($target_file_bike_image);
-        // exit();
+    //   echo implode(",",$all_bikes_pictures_names);
+    //   exit();
+
+    //   for ($i=0;$i < count($bike_pictures);  $i++){ 
+    //     # code...
+    //     $all_bikes_pictures_names[] = $bike_pictures['name'][$i]; 
 
 
-        if (move_uploaded_file($_FILES["bike_image"]["tmp_name"],$target_file_bike_pictures)) {
-            echo "The bike image has been uploaded";
-            // header("location: ../home.php");
-        } else {
-            echo "Failed to upload";
-            // header("location: ../sell.php") ;
-        } 
+    //   }
 
-    //    if (move_uploaded_file($_FILES['bike_pictures']['tmp_name'],$target_file_bike_image)) {
-    //         echo "The bike image has been uploaded";
-    // }  else {
-    //     header("location: ../sell.php");
-    //    } 
-        var_dump("File upload");
-        // exit();
-        // $this->insertBike($bike_name,$bike_cost,$bike_description,$bike_image,$bike_pictures);
-        
-        // header("location: ../home.php");
+    $targetDirectory = ".././public/assets/";
 
-        exit();
+    move_uploaded_file($bike_image['tmp_name'],$targetDirectory . basename($bike_image['name']));
 
+
+    for ($i=0; $i < count($bike_pictures) ; $i++) { 
+        $target_file = $targetDirectory . basename($bike_pictures['name'][$i]); 
+
+        move_uploaded_file($bike_pictures['tmp_name'][$i], $target_file);  
+        $all_bikes_pictures_names[] = $bike_pictures['name'][$i]; 
+
+    }
+      
+    $this->insertBike($bike_name,$bike_cost,$bike_description,$bike_image = $bike_image['name'],$bike_pictures= implode(",",$all_bikes_pictures_names),$bike_year);
+    header('location: .././resources/views/home.php');
+
+    exit();  
              
     }
 
@@ -83,15 +77,11 @@ class BikesController extends Bike {
     public function bikeEnquire($buyer_email, $buyer_name, $bike_id,$buyer_contact,$buyer_message) {
 
         // send mail to the requested user , no need to save in the DB
-        $to = 'test@email.com';
 
-$subject = 'Hola';
-
-$message = 'This is a test email.';
 
     mail($buyer_email, 'Interested in the bike', $buyer_message);
 
-        $this->enquire($buyer_email, $buyer_name, $bike_id,$buyer_contact,$buyer_message);
+        // $this->enquire($buyer_email, $buyer_name, $bike_id,$buyer_contact,$buyer_message);
 
     }
 

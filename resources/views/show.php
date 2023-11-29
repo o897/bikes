@@ -1,8 +1,10 @@
 <?php
-session_start();
-// print_r($_SESSION);
-include "../../includes/show.php";
+  session_start();
 
+  if (!$_SESSION) {
+    header('location: .././index.php');
+    exit();
+}
 
 ?>
 <!DOCTYPE html>
@@ -12,10 +14,11 @@ include "../../includes/show.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BikeTrader</title>
-    <!-- js -->
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../public/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../../public/styles/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/styles/bootstrap.min.css">
 
 
 </head>
@@ -25,14 +28,16 @@ include "../../includes/show.php";
     <div class="container">
        <div class="show-info">
         <!-- Within the find method in the bike MOdel set the bikeName -->
-        <h1><?php echo $_SESSION['bikeName']; ?></h1>
+        
+        <h1 class="show-info__bikeName"><?php echo $_SESSION['bikeName']; ?></h1>
         <h1 class="show-info__price">R<?php echo $_SESSION['bikePrice']; ?></h1>
         </div>
 
     <div class="show">
         <div class="bike__image-show">
-            <div class="mb-0">
-                <img src="https://electrifiedreviews.com/bike-images/1644/Electrified.jpeg" alt="bike image" >
+            <div class="bike__image-show-img mb-0">
+            <img src="../../public/assets/<?php echo $_SESSION['bikeImage'];?>" alt="">
+                <!-- <img src="https://electrifiedreviews.com/bike-images/1644/Electrified.jpeg" alt="bike image" > -->
             </div>
             
             <div class="bike__details">
@@ -74,14 +79,16 @@ include "../../includes/show.php";
             </div>
             </div>
         </div> 
+        
         <div class="bike__contact-owner">
             <div class="bike__contact">
-                <h5>Contact the owner</h5>
-                <button>Show Contact Number</button>
+                <h5 id="ownerContact"><?php echo $_SESSION['contact']; ?></h5>
+                <h5 id="contactOwnerLabel">Contact the owner</h5>
+                <button onclick="toggleVisibility();">Show Contact Number</button> <!--onclick hide h5, change text content -->
             </div>
             
             <div class="bike__contact-form">
-                <form action=".././includes/buyer.inc.php" method="post">
+                <form action="../../includes/buyer.inc.php" method="post">
                     <div class="bike__contact-input pt-2">
                         <label for="">Email</label>
                         <!-- Logged user details extract from session -->
@@ -97,7 +104,7 @@ include "../../includes/show.php";
                     </div>
                     <div class="bike__contact-input">
                         <label for="bike_message">Message</label>
-                        <textarea name="bike_message" id="" placeholder="<?php echo('I would like to check the availability of the ') . $_SESSION['bikeName']; ?>"></textarea>   
+                        <textarea name="buyer_message" id="" placeholder="<?php echo('I would like to check the availability of the ') . $_SESSION['bikeName']; ?>"></textarea>   
                     </div>
                     <button name="submit" type="submit" class="book-btn">Send Message</button>
                     <div class="bike__contact-input">
@@ -112,15 +119,24 @@ include "../../includes/show.php";
         </div>  
     </div>    
     </div>
-    
-   
-   <script>
-    console.log("Hello World");
-   </script>
-   <footer>
-    <div class="">
-        <p>BikeTrader</p>
-    </div>
-   </footer>
+    <?php include "../components/footer.php";?> 
+
+    <script>
+        let ownerContact = document.getElementById('ownerContact');
+        let contactOwnerLabel = document.getElementById('contactOwnerLabel');
+
+        ownerContact.style.display = "none";
+
+        function toggleVisibility() {
+
+            if(ownerContact.style.display === "none") {
+                contactOwnerLabel.style.display = "none";
+                ownerContact.style.display = "block";
+            }
+       
+            
+        }
+        
+    </script>
 </body>
 </html>

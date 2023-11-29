@@ -1,9 +1,8 @@
 <?php
-
-    include "../Models/dbh.php";
-
-    // include "../Models/Bike.php";
-    // include "../Models/User.php";
+   
+    include ".././Models/dbh.php";
+    include ".././Models/Bike.php";
+    include ".././Models/User.php";
     include "Controllers/BikesController.php";
     include "Controllers/UserController.php";
 
@@ -11,7 +10,9 @@
 
     $findBike = new BikesController();
     $bike = $findBike->show($bikeId);
+    header('location: ../resources/views/show.php');
 
+   
 
 ?>
 

@@ -28,10 +28,11 @@ class User extends Dbh {
         // if fail to execute
         if(!$query->execute(array($username, $email))){
             $query = null;
-            header("location; ../index.php?error=checkqueryfailed");
+            header("location; ../register.php?error=failedtoregisteruser");
             exit();
         }
 
+        // if user exits return true or false
         $results = $query->rowCount() > 0 ? true : false ;
 
         return $results;    

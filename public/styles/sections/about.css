@@ -1,0 +1,18 @@
+
+.about {
+    width: 380px;
+    height: 500px;
+    padding: 50px;
+    border: 1px solid black;
+    position: relative;
+    top: 50px;
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color: #fff;
+}
+
+.about__body {
+    background-color: purple;
+}

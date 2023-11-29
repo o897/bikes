@@ -1,5 +1,5 @@
 a {
-    text-decoration:none ;   /* removes underline from links*/
+    text-decoration:none !important;   /* removes underline from links*/
 }
 
 /* card */
@@ -90,13 +90,61 @@ a {
     gap: 12px;
     margin: 10px;
     position: relative;
-    left: 9px;
+    justify-content: center;
 }
 
 
 .hero__bike-images img {
-    width: 95px;
+    width: 119px;
     height: 66px;
     object-fit: cover;
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .hero__bike-card {
+        width: 100%;
+        padding: 5px;
+        height: 484px;
+        display:flex;
+        flex-direction: column;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+    }
+
+    .hero__bike-card-inner {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .hero__bike-price {
+        margin-bottom: 2px;
+    }
+    .hero__bike-price-pm {
+        margin-bottom: 6px;
+    }
+    .hero__bike-title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+
+    .hero__bike-type {
+        margin-bottom: 3px;
+    }
+    .hero__bike-photo img {
+        width: 100%;
+    }
+
+    .hero__bike-images img {
+        display: none; /* Hide all images by default */
+    }
+
+    .hero__bikes-images img:nth-child(-n+3) {
+        display: block;
+      }
+
 
 }

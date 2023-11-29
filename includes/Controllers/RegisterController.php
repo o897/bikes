@@ -49,7 +49,7 @@ class SignupController extends User {
         }
 
         $this->setUser($this->username,$this->password,$this->email,$this->contact);
-        // header("location: ../home.php");
+        header("location: ../home.php");
 
     }
 

@@ -1,14 +1,19 @@
+header {
+    margin: 0;
+}
+
 .header__nav {
     display:flex;
     overflow: hidden;
-    border: 1px solid black;
-    height: 56px;
+    border: none;
+    height: 70px;  
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     background-color: #0A4FBF;
     color: #fff;
     padding: 4px 6px;
+    /* display: block; */
 }
 
 a {
@@ -29,8 +34,8 @@ a {
 
 .header__menu {
     display: flex;
-    list-style-type: none;
     justify-content: flex-end;
+    list-style-type: none;
     flex: 1;
     gap: 23px;
 }
@@ -41,4 +46,95 @@ a {
     color: #fff;
     text-decoration: none;
     cursor: pointer;
+}
+
+.openbtn {
+    display: none;
+}
+
+.closebtn {
+    display: none;
+}
+
+@media only screen and (max-width: 480px){
+
+    h1 {
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    .header__nav {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        z-index: 7;
+        top: 0;
+        left: -16px; /* be at the left */
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 50px;
+        transition: 0.5s;
+    }
+
+    .header__logo {
+        margin-bottom: 50px;
+        align-items: center;
+        position: relative;
+        /* left: -16px; */
+        margin-left: 0;
+        display: flex;
+
+    }
+
+    .header__logo a {
+        position: relative;
+        left: 15px;
+
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+    }
+
+    .header__menu li a {
+        padding: 8px 8px 8px 32px; 
+        text-decoration: none;
+        font-size: 14px;
+        color: white;
+        transition: 0.3s;
+    }
+    
+    .header__menu li:hover {
+        color: green;
+        
+    }
+    
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        display: block;
+    
+    }
+    
+    
+    .openbtn {
+        font-size: 22px;
+        cursor: pointer;
+        background: black;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        display: block;
+    }
+    
+    .openbtn:hover {
+        background-color: purple;
+    }
 }

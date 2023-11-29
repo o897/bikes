@@ -28,15 +28,16 @@ class Bike extends Dbh {
             $bike = $this->connect()->prepare($bike);
             $bike->execute(array($id));
             $result = $bike->fetchAll(\PDO::FETCH_ASSOC);
-            
 
             session_start();
             $_SESSION["bikeId"] = $result[0]["bikeId"];
             $_SESSION["bikeName"] = $result[0]["bike_name"];
             $_SESSION["bikePrice"] = $result[0]["bike_cost"];
+            $_SESSION["bikeImage"]  = $result[0]["bike_image"];
+            $_SESSION["bikeContact"] = $result[0]["bike_contact"];
 
-            print_r($_SESSION);
-            exit();
+            // print_r($_SESSION);
+            // exit();
 
 
             return $result;
@@ -76,12 +77,12 @@ class Bike extends Dbh {
         
     // }
 
-    public function insertBike($bike_name,$bike_cost,$bike_description,$bike_image,$bike_pictures) {
+    public function insertBike($bike_name,$bike_cost,$bike_description,$bike_image ,$bike_pictures,$bike_year) {
         // use details well extract from the session using their id
-        $query = $this->connect()->prepare('INSERT INTO bikes (bike_name,bike_cost,bike_description,bike_image,bike_pictures) VALUES (?, ?, ?,?,?);');
+        $query = $this->connect()->prepare('INSERT INTO bikes (bike_name,bike_cost,bike_description,bike_image,bike_pictures,bike_year) VALUES (?, ?, ?,?,?,?);');
 
 
-        if(!$query->execute(array($bike_name,$bike_cost,$bike_description,$bike_image,$bike_pictures))) {
+        if(!$query->execute(array($bike_name,$bike_cost,$bike_description,$bike_image,$bike_pictures,$bike_year))) {
             $query = null;
             header("location; ../sell.php?error=failedToStoreBike");
         }

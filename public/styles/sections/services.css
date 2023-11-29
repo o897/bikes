@@ -1,0 +1,19 @@
+
+.services {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.services__image img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.services__content {
+
+}
+
+.our__service {
+    font-size: 16px;
+}
