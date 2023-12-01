@@ -21,7 +21,7 @@ if (!$_SESSION) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BikeTrader</title>
-    <link rel="icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../public/favicon.ico" type="image/x-icon">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="../../public/styles/main.css">
 

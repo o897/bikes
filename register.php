@@ -20,7 +20,7 @@ session_start();
 <body>
     <div class="container">
         <div class="form">
-            <div class="signup">
+            <div class="login">
 
                 <h1>Signup / <a href="index.php">Login</a></h1>
                 <form action="includes/signup.inc.php" method="post">

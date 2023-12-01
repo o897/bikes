@@ -1,21 +1,55 @@
 <?php
+require "../vendor/autoload.php";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
-if(isset($_POST['submit'])){
+$dotenvPath = __DIR__ . '../.env';
+use Dotenv\Dotenv as Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__ . '../../');
+$dotenv->load();
 
-    $subject = $_POST['firstname'] . ' '. $_POST['lastname'] . 'Interested in the bike';
-    $to = $_POST['to'];
-    $message = $POST['message'];
-    $headers = "From: sender@example.com";
-
+if (isset($_POST['submit'])) {
     
-    // Use the mail() function to send the email
-$mailResult = mail($to, $subject, $message, $headers);
+try {
 
-// Check if the email was sent successfully
-if ($mailResult) {
-    echo "Email sent successfully!";
-} else {
-    echo "Error sending email.";
+
+$mail = new PHPMailer(true);
+
+$mail->isSMTP();
+$mail->SMTPAuth = true;
+
+
+$mail->Host = $_ENV['SMTP_HOST'];
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+$mail->Port = 2525;
+
+$mail->Username = $_ENV['SMTP_USERNAME'];
+$mail->Password = $_ENV['SMTP_PASSWORD'];
+
+$mail->setFrom($_POST['email'],$_POST['firstname'] . ' ' . $_POST['lastname']);
+$mail->addAddress("orapelengm239@gmail.com",'Pele');
+
+$mail->Subject = $_POST['contact'] . "Buyer";
+$mail->Body = $_POST['message'];
+
+$mail->send();
+
+
+echo "mail sent";
+
+} catch (\Throwable $th) {
+    //throw $th;
+    echo $th . ' ' . "Mail not sent.";
+    exit();
 }
 
+
+
 }
+
+
+
+
+       
+    
+
