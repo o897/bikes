@@ -6,12 +6,14 @@ if (!$_SESSION) {
 
 // When I use an env var for google api, i throws an err on google map but it still works.
 
-// $dotenvPath = __DIR__ . '../../.env';
-// require __DIR__ . '/../../vendor/autoload.php'; // Autoload Composer packages
-// use Dotenv\Dotenv as Dotenv;
-// $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
-// $dotenv->load();
+$dotenvPath = __DIR__ . '../../.env';
+require __DIR__ . '/../../vendor/autoload.php'; // Autoload Composer packages
+use Dotenv\Dotenv as Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->load();
 
+// echo $_ENV['GOOGLE_API'];
+// exit();
 
 ?>
 <!DOCTYPE html>
@@ -49,7 +51,7 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 </script>
     <!-- prettier-ignore -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_xW6vzyyhkUFzIYLaLIR_Gf0yl1HnHcI&callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?php $_ENV['GOOGLE_API'] ?>&callback=myMap"></script>
 
     </div>
     
