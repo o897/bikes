@@ -2,7 +2,7 @@
   session_start();
 
   if (!$_SESSION) {
-    header('location: .././index.php');
+    header('location: ../../index.php');
     exit();
 }
 
@@ -15,14 +15,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BikeTrader</title>
-    <!-- js -->
     <link rel="icon" href="../../public/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../../public/styles/main.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../public/styles/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 
 </head>
@@ -32,15 +27,15 @@
 
     <div class="container">
 
-        <h1>🔧 Our Services:</h1>
+        <h1 class="mt-3 mb-4">🔧 Our Services</h1>
 
-        <div class="services row">
+        <div class="services d-flex">
 
             <div class="services__image ">
                 <img src="https://hips.hearstapps.com/hmg-prod/images/joel-working-0065-1579013157.jpg" alt=""
                     srcset="">
             </div>
-            <div class="services__content">
+            <div class="services__content px-5 pt-5">
                 <div class="mb-2 our__service">
                     <strong>Tune-Ups: </strong><p>Bring back that smooth, silent ride with our comprehensive tune-up
                     services.</p>
@@ -62,7 +57,7 @@
 
     </div>
 
-        <?php include "../components/footer.php";?>
-</body>
+    <?php include "../components/footer.php";?>
 
+</body>
 </html>

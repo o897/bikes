@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!$_SESSION) {
-    header('location: .././index.php');
+    header('location: ../../index.php');
 }
 
 // When I use an env var for google api, i throws an err on google map but it still works.
@@ -41,15 +41,7 @@ $dotenv->load();
     <div id="googleMap" style="width:100%;height:400px;"></div>
 
 
-    <script>
-function myMap() {
-var mapProp= {
-  center:new google.maps.LatLng(-25.507856, 28.017113),
-  zoom:14,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-</script>
+
     <!-- prettier-ignore -->
     <script src="https://maps.googleapis.com/maps/api/js?key=<?php $_ENV['GOOGLE_API'] ?>&callback=myMap"></script>
 
