@@ -78,12 +78,7 @@ $bikes = new BikesController();
                            
                         </div>
                         <div class="hero__bike-images">
-                                <!-- <img src="https://pedego.co.za/cdn/shop/products/TWIN-E.27seatL.jpg?v=1664424595" alt="" srcset="">
-                                <img src="https://bike-addict.co.za/cdn/shop/collections/MG_6708_1400x.jpg?v=1623397754" alt="" srcset="">
-                                <img src="https://live.staticflickr.com/65535/53167989317_2ff071d344_c.jpg" alt="" srcset="">
-                                <img src="https://detourcycles.co.za/cdn/shop/products/image_def50259-d09e-4d6c-be1c-e01d8f18c482_1024x1024@2x.png?v=1617970735" alt="" srcset="">
-                                <img src="https://media.bikehub.co.za/production/Media/MarketplaceItem/2023/675039/-1696935820-0128_medium.jpg" alt="" srcset="">
-                                <img src="https://electrek.co/wp-content/uploads/sites/3/2021/08/spectre-main.png?w=1600" alt=""> -->
+
                                 <?php
                                     $imageArray = explode(",", $bikes["bike_pictures"]);
 
@@ -103,10 +98,7 @@ $bikes = new BikesController();
 
                 </a>
 
-                <div class="hero__bike-images">
-                    <!-- <img src="public/images/cannondale-topstone-neo-carbon-3-lefty-374475-1.png" alt=""> -->
-                    <!-- <img src="public/images/cannondale-topstone-neo-carbon-3-lefty-374475-1.png" alt=""> -->
-                </div>
+           
 
                 <?php
          } 
