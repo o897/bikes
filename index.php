@@ -11,6 +11,8 @@ session_start();
     <title>BikeTrader</title>
     <link rel="icon" href="public/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="public/styles/index.css">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <!-- <link rel="stylesheet" href="public/styles/bootstrap.min.css"> -->
 
 </head>
