@@ -10,26 +10,24 @@ class Dbh {
    
     protected function connect() 
     {
-        try {
-            $username = "root";
-            $password = "";
 
-            //  
-            $host = $_ENV['DB_HOST'] . ':' . 25066;
+            $host = $_ENV['DB_HOST'];
             $dbname = $_ENV['DB_NAME'];
             $username = $_ENV['DB_USER'];
             $password = $_ENV['DB_PASSWORD'];
+            $port = $_ENV['DB_PORT'];
 
-            //  
-            // $dbh = new PDO('mysql:host=localhost;dbname=bikes',$username,$password);
-            $dbh = new PDO('mysql:host='.$host.';dbname='.$dbname.'',$username,$password);
+            $dsn = "mysql:host=$host;port=$port;dbname=$dbname;sslmode=require";
+         
 
-            return $dbh;
-            
-        } catch(PDOException $e) {
-            print "Error! " . $e->getMessage() . "<br/>";
-            die();
-        }
+try {
+    $dbh = new PDO($dsn, $username, $password);
+   
+   return $dbh;
+
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
     }
 
 }

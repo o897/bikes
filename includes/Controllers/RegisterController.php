@@ -49,7 +49,7 @@ class SignupController extends User {
         }
 
         $this->setUser($this->username,$this->password,$this->email,$this->contact);
-        header("location: ../home.php");
+        header("location: .././resources/views/home.php");
 
     }
 
@@ -62,6 +62,7 @@ class SignupController extends User {
         return filter_var($this->email,FILTER_VALIDATE_EMAIL) ? true : false;
     }
 
+    // validate if emails match
     // public function validateUsername()
     // {
     //     return preg_match("/^[a-zA-Z0-9]*$/",$this->username) ? true : false;

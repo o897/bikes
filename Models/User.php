@@ -40,8 +40,9 @@ class User extends Dbh {
    
     public function login($username,$password) {
 
-        // We have to veryfty the password
+        // We have to verify the password
         $query = $this->connect()->prepare('SELECT * FROM users WHERE username = ?');
+        
 
         $query->bindParam(1, $username);
         
