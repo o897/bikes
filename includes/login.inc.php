@@ -6,8 +6,7 @@ if(isset($_POST["submit"])) {
 
     $token = filter_input(INPUT_POST,'token',FILTER_SANITIZE_STRING);
 
-    echo $token;
-    exit();
+   
     if(CSRF::validate_token($token)){
         $username = $_POST["username"];
         $password = $_POST["password"];
@@ -22,7 +21,6 @@ if(isset($_POST["submit"])) {
     
         $login->loginUser();
     
-        // If login was successful go to bikes
     } else {
 
         echo '<p class="error">Error: invalid form submission</p>';
