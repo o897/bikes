@@ -1,12 +1,13 @@
 <?php
-
+ session_start();
+ 
 class CSRF
 {
     public static function create_token()
     {
         // Generate token
       $token = md5(uniqid(mt_rand(),true));
-      $SESSION['token'] =  $token ;
+      $_SESSION['token'] =  $token ;
     //   echo '<input type="hidden" name="token" value="$token">';
         return $token;
 

@@ -1,7 +1,7 @@
 <?php
+
 require_once("includes/CSRF.php");
 
-session_start();
 
 ?>
 <!DOCTYPE html>
