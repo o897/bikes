@@ -13,7 +13,7 @@ session_start();
     <link rel="icon" href="public/favicon.ico" type="image/x-icon">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-    <link rel="stylesheet" href="public/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="public/js/fontawesome.min.js">
     <link rel="stylesheet" href="public/styles/index.css">
 
 </head>
@@ -23,29 +23,30 @@ session_start();
         <div class="form">
             <div class="login">
 
-                <h1>Signup / <a href="index.php">Login</a></h1>
                 <form action="includes/signup.inc.php" method="post">
+                    <h1>Register</a></h1>
                     <div class="formfield">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" name="username" placeholder="Username">
+                        <input type="text" name="username" placeholder="Username" autocomplete="off">
                     </div>
                     <div class="formfield">
                         <i class="fa-solid fa-envelope"></i>
-                        <input name="email" type="text" placeholder="Email">
+                        <input name="email" type="text" placeholder="Email" autocomplete="off">
                     </div>
                     <div class="formfield">
                         <i class="fa-solid fa-envelope"></i>
-                        <input name="contact" type="text" placeholder="Contact">
+                        <input name="contact" type="text" placeholder="Contact" autocomplete="off"
+                        >
                     </div>
                     <div class="formfield">
                         <i class="fa-solid fa-lock"></i>
-                        <input name="password" type="password" placeholder="Password">
+                        <input name="password" type="password" placeholder="Password" autocomplete="off">
                     </div>
                     <div class="formfield">
                         <i class="fa-solid fa-check"></i>
-                        <input name="password2" type="password" placeholder="Confirm password">
+                        <input name="password2" type="password" placeholder="Confirm password" autocomplete="off">
                     </div>
-                    <button type="submit" name="submit">Signup</button>
+                    <button type="submit" name="submit"><strong>Signup</strong></button>
                 </form>
             </div>
         </div>

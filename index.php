@@ -19,19 +19,20 @@ require_once("includes/CSRF.php");
 <body>
       
             <div class="login justify-content-center">
-            <h1>Login / <a href="register.php">Register</a></h1>
              <form action="includes/login.inc.php" method="post">
-                <!-- <?php ;?> -->
+                <h1>Login / <a class="register__link" href="register.php">Register</a></h1>
+
                 <input type="hidden" name="token" value="<?php echo CSRF::create_token() ?? '' ?>">
                 <div>
-                    <input type="text" name="username" placeholder="Username">
+                    <input type="text" name="username" placeholder="USERNAME">
                 </div>
                 <div>   
-                    <input type="text" name="password" placeholder="Password">
+                    <input type="text" name="password" placeholder="PASSWORD">
                 </div>
                 <div>
                     <button type="submit" name="submit">Login</button>
                 </div>
+                
                 </form>
             </div>
             

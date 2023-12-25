@@ -18,13 +18,16 @@ a {
 }
 
 .login {
-    margin: 0 auto;
+    
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     padding: 15px 15px;
     font-size: 17px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   
 }
 
 input:focus {
@@ -37,13 +40,15 @@ input {
     border-bottom: 1px solid black;
     background-color: inherit;
     margin-bottom: 20px;
-    width: 205px;
+    width: 296px;
+    
 }
+
 
 button {
     background-color: #025E73;
-    height: 30px;
-    width: 209px;
+    width: 300px;
+    height: 45px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -76,13 +81,13 @@ button {
         border-bottom: 1px solid black;
         background-color: inherit;
         margin-bottom: 20px;
-        width: 205px;
+        width: 296px;
     }
     
     button {
         background-color: #025E73;
         height: 30px;
-        width: 246px;
+        width: 300px;
         border: none;
         width: 92px;
         border-radius: 5px;
