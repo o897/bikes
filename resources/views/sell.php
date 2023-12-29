@@ -32,6 +32,8 @@
         <div class="col-lg-6">
           <h2>Sell your Bike !!!</h2>
         <form id="sellForm" action="../../includes/sell.inc.php" method="post" enctype="multipart/form-data">
+         <input type="hidden" name="token" value="<?php echo CSRF::create_token() ?? '' ?>">
+
           <div class="mb-3">
             <label for="">Bike name</label>
             

@@ -72,6 +72,7 @@
 
                     <div class="contact__fields">
                         <form action="../../includes/mail.php" method="post">
+                        <input type="hidden" name="token" value="<?php echo CSRF::create_token() ?? '' ?>">
 
                         <div class="contact__fields-box mb-4">
                             <div class="d-flex flex-column">

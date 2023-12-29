@@ -1,10 +1,15 @@
 <?php
+require_once('CSRF.php');
 
 // "submit is te name of the button
 if(isset($_POST["submit"])) {
  
    
 
+    $token = filter_input(INPUT_POST,'token',FILTER_SANITIZE_STRING);
+
+   
+    if(CSRF::validate_token($token)) {
 
 
     $bike_name = $_POST['bike_name'];
@@ -33,6 +38,12 @@ if(isset($_POST["submit"])) {
    
     // SAVE THE BIKE IN THE DB
     $sell_bike->storeBike($bike_name,$bike_cost,$bike_description,$bike_image,$bike_pictures,$bike_year);
+
+    } else {
+        echo '<p class="error">Error: invalid form submission</p>';
+        header($_SERVER['SERVER_PROTOCOL'] . '405 Method Not Allowed');
+        exit();
+    }
 
 }
 

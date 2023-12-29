@@ -1,4 +1,5 @@
 <?php
+require_once('CSRF.php');
 require "../vendor/autoload.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -9,7 +10,13 @@ $dotenv = Dotenv::createImmutable(__DIR__ . '../../');
 $dotenv->load();
 
 if (isset($_POST['submit'])) {
+
     
+$token = filter_input(INPUT_POST,'token',FILTER_SANITIZE_STRING);
+
+   
+if(CSRF::validate_token($token)) {
+
 try {
 
 
@@ -34,12 +41,17 @@ $mail->Body = $_POST['message'];
 
 $mail->send();
 
-
 echo "mail sent";
 
 } catch (\Throwable $th) {
     //throw $th;
     echo $th . ' ' . "Mail not sent.";
+    exit();
+}
+
+} else {
+    echo '<p class="error">Error: invalid form submission</p>';
+    header($_SERVER['SERVER_PROTOCOL'] . '405 Method Not Allowed');
     exit();
 }
 

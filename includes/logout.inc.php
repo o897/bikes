@@ -1,4 +1,5 @@
 <?php
+require_once('CSRF.php');
 
 session_start();
 session_unset();

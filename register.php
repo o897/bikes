@@ -24,6 +24,8 @@ session_start();
             <div class="login">
 
                 <form action="includes/signup.inc.php" method="post">
+                    <input type="hidden" name="token" value="<?php echo CSRF::create_token() ?? '' ?>">
+
                     <h1>Register</a></h1>
                     <div class="formfield">
                         <i class="fa-solid fa-user"></i>
