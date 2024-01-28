@@ -1,16 +1,16 @@
 <?php
-$dotenvPath = __DIR__ . '../.env';
-require __DIR__ . '../../vendor/autoload.php'; // Autoload Composer packages
 use Dotenv\Dotenv as Dotenv;
-$dotenv = Dotenv::createImmutable(__DIR__ . '../../');
-$dotenv->load();
+
+if ($dotenvPath = __DIR__ . '../.env' == True) {
+    require __DIR__ . '../../vendor/autoload.php'; // Autoload Composer packages
+    $dotenv = Dotenv::createImmutable(__DIR__ . '../../');
+    $dotenv->load();
+}
 
 class Dbh {
 
-   
     protected function connect() 
     {
-
             $host = $_ENV['DB_HOST'];
             $dbname = $_ENV['DB_NAME'];
             $username = $_ENV['DB_USER'];
