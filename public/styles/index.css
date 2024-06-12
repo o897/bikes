@@ -1,96 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+20&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Days+One&family=Dela+Gothic+One&family=Jersey+20&display=swap");
+
 html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #dedee2 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #dedee2 !important;
 }
 
+* {
+  margin: 0;
+}
 a {
-    text-decoration: none !important;
-    color: initial;
+  text-decoration: none !important;
+  color: initial;
 }
 
+h3 {
+  margin-bottom: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
 
 .signup {
+  padding: 4px 15px;
+  font-size: 17px;
+  display: grid;
+  gap: 10px;
+}
+
+.login {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #ECECEC; */
+  z-index: 2;
+  border-left: 1px solid black;
+  height: 100%;
+}
+
+.login-form {
+  border-left: 1px black;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  position: relative;
+}
+
+.login-form--title {
+  font-size: 5rem;
+  width: fit-content;
+  background-color: inherit;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* margin-left: 10vw; */
+  margin-top: 10vh;
+}
+
+.login-form--title-sub {
+  font-size: 7rem;
+  width: fit-content;
+  background-color: inherit;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 33px;
+  /* margin-left: 10vw; */
+}
+
+.login-form--sub-title {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.login-form-sub {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+}
+
+.login-form form p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 5px 0;
+}
+
+.login-side {
+  width: 30%;
+  background-color: #ff733b;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+
+.login-side--img {
+  border: none;
+  width: 100%;
+  right: 40%;
+  position: absolute;
+}
+
+.login-form--input {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form--login-title {
+    margin-bottom: 14px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+input {
+  border: 1px solid #c0b4b4;
+  border-radius: 8px;
+  outline: none;
+  background-color: inherit;
+  margin-bottom: 5px;
+  width: 300px;
+  height: 22px;
+  padding-left: 20px;
+  margin-top: 4px;
+}
+
+button {
+  background-color: #ff760e;
+  width: 323px;
+  height: 33px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .signup {
     padding: 4px 15px;
     font-size: 17px;
     display: grid;
     gap: 10px;
-    
-}
+  }
 
-.login {
-    
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+  .login {
     padding: 15px 15px;
     font-size: 17px;
     display: flex;
-   
-}
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 200px;
+  }
 
-input:focus {
-    background-color: initial !important;
-}
-
-input {
+  input {
     border: none;
     outline: none;
     border-bottom: 1px solid black;
     background-color: inherit;
     margin-bottom: 20px;
     width: 296px;
-    
-}
+  }
 
-
-button {
-    background-color: #025E73;
+  button {
+    background-color: #025e73;
+    height: 30px;
     width: 300px;
-    height: 45px;
     border: none;
+    width: 92px;
     border-radius: 5px;
     cursor: pointer;
-    color: white;
-}
-
-@media only screen and (max-width: 480px) {
-    .signup {
-        padding: 4px 15px;
-        font-size: 17px;
-        display: grid;
-        gap: 10px;
-        
-    }
-    
-    .login {
-        padding: 15px 15px;
-        font-size: 17px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        top: 200px;
-    }
-    
-    
-    input {
-        border: none;
-        outline: none;
-        border-bottom: 1px solid black;
-        background-color: inherit;
-        margin-bottom: 20px;
-        width: 296px;
-    }
-    
-    button {
-        background-color: #025E73;
-        height: 30px;
-        width: 300px;
-        border: none;
-        width: 92px;
-        border-radius: 5px;
-        cursor: pointer;
-    } 
+  }
 }

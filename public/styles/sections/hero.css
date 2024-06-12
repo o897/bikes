@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 a {
     text-decoration:none !important;   /* removes underline from links*/
 }
@@ -101,7 +102,56 @@ a {
 
 }
 
+.hero__card {
+    display: none;
+}
+
 @media only screen and (max-width: 480px) {
+
+    .hero__card {
+        display: flex;
+        width: 100%;
+        height: 221px;
+        background-color: #059E3C;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        font-family: "Urbanist", sans-serif;
+
+        
+    }
+
+    .hero__card-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero__card-text-title {
+        color: #fff;
+        font-size: 1.9rem;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+        align-self: baseline;
+        position: relative;
+        top: -40px;
+        font-family: "Urbanist", sans-serif;
+    }
+
+    .hero__card-text-sub  {
+        font-size: 1.24rem;
+        color: #fff;
+        font-family: "Urbanist", sans-serif;
+    }
+
+    .hero__card-text-sub-small {
+        display: flex;
+        justify-content: flex-end;
+    }
+
 
     .hero__bike-card {
         width: 100%;

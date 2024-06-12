@@ -28,6 +28,8 @@ $bikes = new BikesController();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <link rel="icon" href="../../public/favicon.ico" type="image/x-icon">
+    <link href="../../public/fontawesome/cs/all.min.cs" rel="stylesheet">
+    <link href="../../public/fontawesome/js/all.min.js" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -43,9 +45,24 @@ $bikes = new BikesController();
 
 
     <div class="container">
+
         <section class="hero col-lg-12">
+        <i class="fa-solid fa-cart-shopping"></i>
             <!-- <img src="../../public/1096053.png" alt="bike" srcset=""> -->
+            <i class="fa-solid fa-right-from-bracket"></i>
             <h1 class="">New and Used bikes for sale</h1>
+
+            <div class="hero__card">
+                <div class="hero__card-img">
+                    <img src="../../public/hero-card.png" alt="">
+                </div>
+                <div class="hero__card-text">
+                    <div class="hero__card-text-title">Bike For Rent</div>
+                    <div class="hero__card-text-sub">Book your nearest</div>
+                    <div class="hero__card-text-sub">Bike Today</div>
+
+                </div>
+            </div>
             <!-- When hovering tilt the image to show the bike info -->
 
             <!-- When Clicked redirect to show -->

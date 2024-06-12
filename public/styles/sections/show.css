@@ -168,17 +168,14 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    justify-content: space-between;
+    margin: 0 5vw;
+
 }
-.show-info h1 {
-    margin: 0;
-    margin-left: 171px;
-    margin-bottom: 20px;
-    width: 500px;
-}
+
 .show-info__price {
     color: #4F8CFF;
     font-weight: 500;
-    padding-left: 33px;
 }
 
 .bike__details-section-summary {

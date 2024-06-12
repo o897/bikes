@@ -1,6 +1,5 @@
 <?php
-  session_start();
-
+  require_once("../../includes/CSRF.php");
   if (!$_SESSION) {
     header('location: ../../index.php');
     exit();
@@ -33,7 +32,6 @@
           <h2>Sell your Bike !!!</h2>
         <form id="sellForm" action="../../includes/sell.inc.php" method="post" enctype="multipart/form-data">
          <input type="hidden" name="token" value="<?php echo CSRF::create_token() ?? '' ?>">
-
           <div class="mb-3">
             <label for="">Bike name</label>
             
