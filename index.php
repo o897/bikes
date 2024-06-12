@@ -11,7 +11,7 @@ require_once("includes/CSRF.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BikeTrader</title>
     <link rel="icon" href="public/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="public/styles/index.css">
+    <!-- <link rel="stylesheet" href="public/styles/index.css"> -->
     <link rel="stylesheet" href="public/styles/main.css">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
